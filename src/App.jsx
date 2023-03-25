@@ -6,25 +6,25 @@ import { Table1Form } from "./Table1Form";
 import { Result } from "./Result";
 import "./styles.css";
 
-type FormData = {
-    First: boolean;
-    Second: boolean;
-    Third: boolean;
-    Fourth: boolean;
-    Fifth: boolean;
-    Sixth: boolean;
-    Seventh: boolean;
-    Eighth: boolean;
-    Ninth: boolean;
-    Tenth: boolean;
-    Eleventh: boolean;
-    Twelfth: boolean;
-    Thirteenth: boolean;
-    Fourteenth: boolean;
-    Fifteenth: boolean;
-};
+// type FormData = {
+//     First: boolean;
+//     Second: boolean;
+//     Third: boolean;
+//     Fourth: boolean;
+//     Fifth: boolean;
+//     Sixth: boolean;
+//     Seventh: boolean;
+//     Eighth: boolean;
+//     Ninth: boolean;
+//     Tenth: boolean;
+//     Eleventh: boolean;
+//     Twelfth: boolean;
+//     Thirteenth: boolean;
+//     Fourteenth: boolean;
+//     Fifteenth: boolean;
+// };
 
-const INITIAL_DATA: FormData = {
+const INITIAL_DATA= {
     First: false,
     Second: false,
     Third: false,
@@ -45,7 +45,7 @@ const INITIAL_DATA: FormData = {
 function App() {
     const [data, setData] = useState(INITIAL_DATA);
     const [show, setShow] = useState(false);
-    function updateFields(fields: Partial<FormData>) {
+    function updateFields(fields) {
         setData((prev) => {
             return { ...prev, ...fields };
         });
@@ -64,7 +64,7 @@ function App() {
         <Table3Form {...data} updateFields={updateFields} />,
     ]);
 
-    function onSubmit(e: FormEvent) {
+    function onSubmit(e) {
         e.preventDefault();
         if (!isLastStep) return next();
         setShow(true);

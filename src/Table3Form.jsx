@@ -1,16 +1,5 @@
 import { FormWrapper } from "./FormWrapper"
 
-type Table3Data = {
-  Eleventh: boolean
-  Twelfth: boolean
-  Thirteenth: boolean
-  Fourteenth: boolean
-  Fifteenth: boolean
-}
-
-type Table3FormProps = Table3Data & {
-  updateFields: (fields: Partial<Table3Data>) => void
-}
 
 export function Table3Form({
   Eleventh,
@@ -19,7 +8,7 @@ export function Table3Form({
   Fourteenth,
   Fifteenth,
   updateFields,
-}: Table3FormProps) {
+}) {
   return (
     <FormWrapper title="Table3 Creation">
       <label>Câu 11</label>

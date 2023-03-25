@@ -1,16 +1,5 @@
 import { FormWrapper } from "./FormWrapper"
 
-type Table1Data = {
-  First: boolean
-  Second: boolean
-  Third: boolean
-  Fourth: boolean
-  Fifth: boolean
-}
-
-type Table1FormProps = Table1Data & {
-  updateFields: (fields: Partial<Table1Data>) => void
-}
 
 export function Table1Form({
   First,
@@ -19,7 +8,7 @@ export function Table1Form({
   Fourth,
   Fifth,
   updateFields,
-}: Table1FormProps) {
+}) {
   return (
     <FormWrapper title="User Details">
       <label>Câu 1</label>

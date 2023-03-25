@@ -3,28 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-type ResultData = {
-    First: boolean;
-    Second: boolean;
-    Third: boolean;
-    Fourth: boolean;
-    Fifth: boolean;
-    Sixth: boolean;
-    Seventh: boolean;
-    Eighth: boolean;
-    Ninth: boolean;
-    Tenth: boolean;
-    Eleventh: boolean;
-    Twelfth: boolean;
-    Thirteenth: boolean;
-    Fourteenth: boolean;
-    Fifteenth: boolean;
-};
-type ResultProps = ResultData & {
-  setShow: () => void;
-};
-
-export function Result(props: ResultProps) {
+export function Result(props) {
   const {setShow}=props  
   const test = Object.values(props)
   const anser1= [1, 3, 5, 7, 15];

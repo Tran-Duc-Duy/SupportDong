@@ -1,11 +1,7 @@
 import { ReactNode } from "react"
 
-type FormWrapperProps = {
-  title: string
-  children: ReactNode
-}
 
-export function FormWrapper({ title, children }: FormWrapperProps) {
+export function FormWrapper({ title, children }) {
   return (
     <div className ={'form_wrap'}>
       <h2 style={{ textAlign: "center", margin: 0, marginBottom: "2rem" }}>
